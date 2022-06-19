@@ -1,0 +1,19 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - deployment.yaml
+  - rbac.yaml
+
+commonLabels:
+  app: e2e-runner
+
+secretGenerator:
+  - name: grgate-github-cert
+    files:
+      - github.private-key.pem=github.private-key.sec.pem
+
+configMapGenerator:
+  - name: grgate-config
+    files:
+      - grgate-config.yaml

@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: production
+resources:
+  - namespace.yaml
+  - ../bases/backend
+  - ../bases/frontend
+images:
+  - name: grgate/demo-frontend
+    newName: grgate/demo-frontend # {"$imagepolicy": "flux-system:demo-frontend-prod:name"}
+    newTag: 5.0.0 # {"$imagepolicy": "flux-system:demo-frontend-prod:tag"}
+  - name: grgate/demo-backend
+    newName: grgate/demo-backend # {"$imagepolicy": "flux-system:demo-backend-prod:name"}
+    newTag: main-c0f5499f71fd711abfa7da97408a0b150627a8ea-5 # {"$imagepolicy": "flux-system:demo-backend-prod:tag"}

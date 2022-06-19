@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: e2e-runner
+spec:
+  strategy:
+    type: Recreate
+  template:
+    spec:
+      serviceAccountName: e2e-runner
+      containers:
+        - name: e2e-runner
+          image: grgate/demo-e2e-runner
+          imagePullPolicy: IfNotPresent
+          envFrom:
+            - secretRef:
+                name: e2e-runner-config
+          env:
+            - name: KUBERNETES_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+          resources:
+            limits:
+              cpu: 100m
+              memory: 256Mi
+            requests:
+              cpu: 50m
+              memory: 128Mi
+          volumeMounts:
+            - name: grgate-github-cert
+              mountPath: /etc/grgate/github.private-key.pem
+              subPath: github.private-key.pem
+            - name: grgate-config
+              mountPath: /etc/grgate/config.yaml
+              subPath: grgate-config.yaml
+            - name: dockersock
+              mountPath: "/var/run/docker.sock"
+      volumes:
+        - name: dockersock
+          hostPath:
+            path: /var/run/docker.sock
+        - name: grgate-github-cert
+          secret:
+            secretName: grgate-github-cert
+        - name: grgate-config
+          configMap:
+            name: grgate-config

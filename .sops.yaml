@@ -1,0 +1,3 @@
+creation_rules:
+- path_regex: .*.sec.pem
+  pgp: AEFA3CE54D4ABD0B874D613A525AA32C060074FE
