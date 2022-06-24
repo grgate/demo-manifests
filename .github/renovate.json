@@ -6,6 +6,7 @@
       "matchDatasources": ["docker"],
       "matchPaths": ["apps/e2e/*"],
       "versioning": "docker",
+      "pinDigests": true,
       "enabled": true
     },
     {
