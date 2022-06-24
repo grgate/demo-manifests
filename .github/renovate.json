@@ -16,6 +16,7 @@
       "matchPaths": ["apps/e2e/*"],
       "automerge": true,
       "enabled": true,
+      "labels": ["ready-to-merge"],
       "ignoreUnstable": true,
       "pinDigests": true,
       "versioning": "docker"
@@ -25,6 +26,7 @@
       "matchPaths": ["apps/production/*"],
       "automerge": true,
       "enabled": true,
+      "labels": ["ready-to-merge"],
       "versioning": "semver"
     }
   ]
