@@ -14,16 +14,18 @@
     {
       "matchDatasources": ["docker"],
       "matchPaths": ["apps/e2e/*"],
-      "versioning": "docker",
-      "pinDigests": true,
+      "automerge": true,
+      "enabled": true,
       "ignoreUnstable": true,
-      "enabled": true
+      "pinDigests": true,
+      "versioning": "docker"
     },
     {
       "matchDatasources": ["docker"],
       "matchPaths": ["apps/production/*"],
-      "versioning": "semver",
-      "enabled": true
+      "automerge": true,
+      "enabled": true,
+      "versioning": "semver"
     }
   ]
 }
