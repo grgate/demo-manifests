@@ -7,4 +7,4 @@ images:
   - name: grgate/demo-frontend
     newTag: latest@sha256:38ed05c1d48f13f1a122a311aa8714d2e7130b39d708f17778d55f50241fefb6
   - name: grgate/demo-backend
-    newTag: latest@sha256:57f91d3177f1c6fefa4d03e5b07d57d2b6a42047fe3ebac8ae8b0ca36120f89f
+    newTag: latest@sha256:b76ca39385538cbe8dc19be33857b94736828ce5c18b7734c9eeeb1f6a1a472b
