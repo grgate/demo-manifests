@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: backend
 spec:
   strategy:
     type: RollingUpdate
   template:
     spec:
-      serviceAccountName: fontend
+      serviceAccountName: backend
       containers:
-      - name: fontend
-        image: grgate/demo-frontend
+      - name: backend
+        image: grgate/demo-backend
         ports:
         - name: http
-          containerPort: 8080
+          containerPort: 8081
         - name: probe
-          containerPort: 8090
+          containerPort: 8091
         resources:
           limits:
             cpu: 100m
