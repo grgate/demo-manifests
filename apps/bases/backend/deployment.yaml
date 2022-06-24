@@ -9,26 +9,26 @@ spec:
     spec:
       serviceAccountName: backend
       containers:
-      - name: backend
-        image: grgate/demo-backend
-        ports:
-        - name: http
-          containerPort: 8081
-        - name: probe
-          containerPort: 8091
-        resources:
-          limits:
-            cpu: 100m
-            memory: 256Mi
-          requests:
-            cpu: 50m
-            memory: 128Mi
-        livenessProbe:
-          httpGet:
-            path: /
-            port: probe
-        readinessProbe:
-          httpGet:
-            path: /
-            port: probe
+        - name: backend
+          image: grgate/demo-backend
+          ports:
+            - name: http
+              containerPort: 8081
+            - name: probe
+              containerPort: 8091
+          resources:
+            limits:
+              cpu: 100m
+              memory: 256Mi
+            requests:
+              cpu: 50m
+              memory: 128Mi
+          livenessProbe:
+            httpGet:
+              path: /
+              port: probe
+          readinessProbe:
+            httpGet:
+              path: /
+              port: probe
 

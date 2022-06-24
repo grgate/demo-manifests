@@ -7,28 +7,28 @@ spec:
     type: RollingUpdate
   template:
     spec:
-      serviceAccountName: fontend
+      serviceAccountName: frontend
       containers:
-      - name: fontend
-        image: grgate/demo-frontend
-        ports:
-        - name: http
-          containerPort: 8080
-        - name: probe
-          containerPort: 8090
-        resources:
-          limits:
-            cpu: 100m
-            memory: 256Mi
-          requests:
-            cpu: 50m
-            memory: 128Mi
-        livenessProbe:
-          httpGet:
-            path: /
-            port: probe
-        readinessProbe:
-          httpGet:
-            path: /
-            port: probe
+        - name: frontend
+          image: grgate/demo-frontend
+          ports:
+            - name: http
+              containerPort: 8080
+            - name: probe
+              containerPort: 8090
+          resources:
+            limits:
+              cpu: 100m
+              memory: 256Mi
+            requests:
+              cpu: 50m
+              memory: 128Mi
+          livenessProbe:
+            httpGet:
+              path: /
+              port: probe
+          readinessProbe:
+            httpGet:
+              path: /
+              port: probe
 

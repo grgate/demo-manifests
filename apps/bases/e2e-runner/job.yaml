@@ -9,7 +9,7 @@ spec:
       serviceAccountName: e2e-runner
       containers:
         - name: e2e-runner
-          image: e2e-runner
+          image: grgate/demo-e2e-runner
           imagePullPolicy: IfNotPresent
           envFrom:
             - secretRef:
