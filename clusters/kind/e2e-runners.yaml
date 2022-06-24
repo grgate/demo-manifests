@@ -9,7 +9,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: "./apps/e2e-runner"
+  path: "./apps/e2e-runners"
   timeout: 5m
   prune: true
   wait: true

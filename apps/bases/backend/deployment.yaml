@@ -11,6 +11,7 @@ spec:
       containers:
         - name: backend
           image: grgate/demo-backend
+          imagePullPolicy: IfNotPresent
           ports:
             - name: http
               containerPort: 8081
