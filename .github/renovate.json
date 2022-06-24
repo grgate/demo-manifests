@@ -4,6 +4,9 @@
   "semanticCommits": true,
   "enabledManagers": ["kustomize"],
   "separateMinorPatch": true,
+  "rebaseStalePrs": true,
+  "prConcurrentLimit": 10,
+  "prHourlyLimit": 10,
   "kustomize": {
     "enabled": true
   },
