@@ -3,6 +3,10 @@
   "masterIssue": true,
   "semanticCommits": true,
   "enabledManagers": ["kustomize"],
+  "separateMinorPatch": true,
+  "kustomize": {
+    "enabled": true
+  },
   "packageRules": [
     {
       "matchDatasources": ["docker"],
