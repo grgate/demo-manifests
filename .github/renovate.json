@@ -1,5 +1,7 @@
 {
+  "extends": ["config:base"],
   "masterIssue": true,
+  "semanticCommits": true,
   "enabledManagers": ["kustomize"],
   "packageRules": [
     {
@@ -7,6 +9,7 @@
       "matchPaths": ["apps/e2e/*"],
       "versioning": "docker",
       "pinDigests": true,
+      "ignoreUnstable": true,
       "enabled": true
     },
     {
