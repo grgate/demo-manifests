@@ -4,9 +4,4 @@ namespace: e2e-feature-a
 resources:
   - namespace.yaml
   - ../../bases/backend
-  - ../../bases/e2e-runner
   - ../../bases/frontend
-secretGenerator:
-  - name: e2e-runner-config
-    env: e2e-runner-config.env
-
