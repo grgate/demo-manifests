@@ -1,0 +1,62 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageRepository
+metadata:
+  name: demo-frontend
+spec:
+  image: grgate/demo-frontend
+  interval: 1m0s
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageRepository
+metadata:
+  name: demo-backend
+spec:
+  image: grgate/demo-backend
+  interval: 1m0s
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImagePolicy
+metadata:
+  name: demo-frontend
+spec:
+  imageRepositoryRef:
+    name: demo-frontend
+  filterTags:
+    pattern: '^main-[a-fA-F0-9]+-(?P<run>.*)'
+    extract: '$run'
+  policy:
+     numerical:
+      order: asc
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImagePolicy
+metadata:
+  name: demo-backend
+spec:
+  imageRepositoryRef:
+    name: demo-backend
+  filterTags:
+    pattern: '^main-[a-fA-F0-9]+-(?P<run>.*)'
+    extract: '$run'
+  policy:
+     numerical:
+      order: asc
+---
+apiVersion: image.toolkit.fluxcd.io/v1alpha1
+kind: ImageUpdateAutomation
+metadata:
+  name: e2e
+spec:
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  git:
+    checkout:
+      ref:
+        branch: main
+    push:
+      branch: auto
+  interval: 5m
+  update:
+    strategy: Setters
+    path: ./apps/e2e/

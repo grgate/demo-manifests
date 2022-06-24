@@ -5,6 +5,9 @@ resources:
   - ./feature-b
 images:
   - name: grgate/demo-frontend
-    newTag: latest@sha256:898ba1a4e54058c130a7b34e579008b39b7a293487b30a2f58ca338e34b30064
+    newName: grgate/demo-frontend # {"$imagepolicy": "flux-system:demo-frontend:name"}
+    newTag: 5.0.0 # {"$imagepolicy": "flux-system:demo-frontend:tag"}
+
   - name: grgate/demo-backend
-    newTag: latest@sha256:b76ca39385538cbe8dc19be33857b94736828ce5c18b7734c9eeeb1f6a1a472b
+    newName: grgate/demo-backend # {"$imagepolicy": "flux-system:demo-backend:name"}
+    newTag: main-c0f5499f71fd711abfa7da97408a0b150627a8ea-5 # {"$imagepolicy": "flux-system:demo-backend:tag"}
