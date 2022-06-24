@@ -5,3 +5,8 @@ resources:
   - namespace.yaml
   - ../bases/backend
   - ../bases/frontend
+images:
+  - name: grgate/demo-frontend
+    digest: v1.0.0
+  - name: grgate/demo-backend
+    digest: v1.0.0

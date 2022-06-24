@@ -1,0 +1,20 @@
+{
+  "masterIssue": true,
+  "enabledManagers": ["kustomize"],
+  "packageRules": [
+    {
+      "matchDatasources": ["docker"],
+      "matchPaths": ["apps/e2e/*"],
+      "versioning": "docker",
+      "enabled": true
+    },
+    {
+      "matchDatasources": ["docker"],
+      "matchPaths": ["apps/production/*"],
+      "versioning": "semver",
+      "enabled": true
+    }
+  ]
+}
+
+
