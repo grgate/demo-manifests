@@ -5,6 +5,6 @@ resources:
   - ./feature-b
 images:
   - name: grgate/demo-frontend
-    newTag: latest@sha256:13fcce55d4dabe08fa4cd8aea04f4a2df646a2b737cdb523145d1cad428ed45d
+    newTag: latest@sha256:38ed05c1d48f13f1a122a311aa8714d2e7130b39d708f17778d55f50241fefb6
   - name: grgate/demo-backend
     newTag: latest@sha256:57f91d3177f1c6fefa4d03e5b07d57d2b6a42047fe3ebac8ae8b0ca36120f89f
