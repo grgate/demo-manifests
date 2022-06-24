@@ -1,15 +1,12 @@
 {
   "extends": ["config:base"],
-  "masterIssue": true,
-  "semanticCommits": true,
+  "semanticCommits": "enabled",
   "enabledManagers": ["kustomize"],
   "separateMinorPatch": true,
-  "rebaseStalePrs": true,
+  "rebaseWhen": "behind-base-branch",
   "prConcurrentLimit": 10,
   "prHourlyLimit": 10,
-  "kustomize": {
-    "enabled": true
-  },
+  "kustomize": {"enabled": true},
   "packageRules": [
     {
       "matchDatasources": ["docker"],
@@ -29,7 +26,7 @@
       "labels": ["ready-to-merge"],
       "versioning": "semver"
     }
-  ]
+  ],
+  "dependencyDashboard": true
 }
-
 
