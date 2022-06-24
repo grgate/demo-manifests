@@ -56,6 +56,16 @@ spec:
         branch: main
     push:
       branch: auto
+    commit:
+      author:
+        name: fluxbot
+        email: fluxbot@example.com
+      messageTemplate: |
+        An automated update from FluxBot
+        [ci skip]        
+      # signingKey:
+      #   secretRef:
+      #     name: git-pgp
   interval: 5m
   update:
     strategy: Setters
