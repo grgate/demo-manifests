@@ -1,0 +1,16 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: e2e-runners
+spec:
+  interval: 30s
+  dependsOn:
+    - name: e2e-environments
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: "./apps/e2e-runner"
+  timeout: 5m
+  prune: true
+  wait: true
+  force: true
