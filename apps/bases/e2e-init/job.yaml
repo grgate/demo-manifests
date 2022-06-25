@@ -1,0 +1,23 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: e2e-init
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      serviceAccountName: e2e-init
+      containers:
+        - name: e2e-init
+          image: grgate/demo-e2e-runner
+          command: ["/bin/sh"]
+          env:
+            - name: KUBERNETES_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+          args:
+            - -c
+            - |
+              kubectl delete job e2e-runner -n $KUBERNETES_NAMESPACE
+  backoffLimit: 0
