@@ -8,7 +8,6 @@ spec:
     kind: GitRepository
     name: flux-system
   path: ./apps/e2e
+  timeout: 5m
   prune: true
-  validation: client
-  decryption:
-    provider: sops
+  wait: true
