@@ -6,4 +6,4 @@ resources:
 images:
   - name: grgate/demo-e2e-runner
     newName: grgate/demo-e2e-runner # {"$imagepolicy": "flux-system:demo-e2e-runner:name"}
-    newTag: main-c0f5499f71fd711abfa7da97408a0b150627a8ea-5 # {"$imagepolicy": "flux-system:demo-e2e-runner:tag"}
+    newTag: main-4b299a22d8f75ba4c934091b078656f9a07a9c8f-5 # {"$imagepolicy": "flux-system:demo-e2e-runner:tag"}
