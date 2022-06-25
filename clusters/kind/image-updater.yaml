@@ -50,19 +50,19 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  # git:
-  #   checkout:
-  #     ref:
-  #       branch: main
-  #   push:
-  #     branch: main
-  #   commit:
-  #     author:
-  #       name: fluxbot
-  #       email: fluxbot@example.com
-  #     messageTemplate: |
-  #       An automated update from FluxBot
-  #       [ci skip]        
+  git:
+    checkout:
+      ref:
+        branch: main
+    push:
+      branch: main
+    commit:
+      author:
+        name: fluxbot
+        email: fluxbot@example.com
+      messageTemplate: |
+        An automated update from FluxBot
+        [ci skip]        
       # signingKey:
       #   secretRef:
       #     name: git-pgp
