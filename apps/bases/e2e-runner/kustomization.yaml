@@ -11,7 +11,7 @@ commonLabels:
 secretGenerator:
   - name: grgate-github-cert
     files:
-      - github.private-key.sec.pem
+      - github.private-key.pem=github.private-key.sec.pem
 
 configMapGenerator:
   - name: grgate-config
