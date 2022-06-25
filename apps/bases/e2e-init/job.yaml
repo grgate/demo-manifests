@@ -19,5 +19,5 @@ spec:
           args:
             - -c
             - |
-              kubectl delete job e2e-runner -n $KUBERNETES_NAMESPACE
+              kubectl delete job e2e-runner -n $KUBERNETES_NAMESPACE || true
   backoffLimit: 0
