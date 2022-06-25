@@ -7,14 +7,12 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  healthChecks:
-    - apiVersion: apps/v1
-      kind: Deployment
-      name: backend
-    - apiVersion: apps/v1
-      kind: Deployment
-      name: frontend
   path: ./apps/e2e
   timeout: 5m
   prune: true
   wait: true
+  force: true
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-gpg

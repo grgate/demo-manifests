@@ -3,6 +3,6 @@ kind: Kustomization
 namespace: flux-system
 resources:
   - e2e-environments.yaml
-  - e2e-runners.yaml
+  # - e2e-runners.yaml
   - production.yaml
   - image-updater.yaml

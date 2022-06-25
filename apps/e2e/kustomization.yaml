@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
   - ./feature-a
   - ./feature-b
+  - ../e2e-runners
 images:
   - name: grgate/demo-frontend
     newName: grgate/demo-frontend # {"$imagepolicy": "flux-system:demo-frontend-e2e:name"}

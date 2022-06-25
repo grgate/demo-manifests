@@ -10,13 +10,6 @@ spec:
     kind: GitRepository
     name: flux-system
   path: ./apps/e2e-runners
-  healthChecks:
-    - apiVersion: apps/v1
-      kind: Deployment
-      name: backend
-    - apiVersion: apps/v1
-      kind: Deployment
-      name: frontend
   timeout: 5m
   force: true
   prune: true
