@@ -93,12 +93,28 @@ spec:
     push:
       branch: main
     commit:
-      author:
-        name: fluxbot
-        email: fluxbot@example.com
       messageTemplate: |
-        Fluxbot automated update
-        [ci skip]
+        Automated image update
+
+        Automation name: {{ .AutomationObject }}
+
+        Files:
+        {{ range $filename, $_ := .Updated.Files -}}
+        - {{ $filename }}
+        {{ end -}}
+
+        Objects:
+        {{ range $resource, $_ := .Updated.Objects -}}
+        - {{ $resource.Kind }} {{ $resource.Name }}
+        {{ end -}}
+
+        Images:
+        {{ range .Updated.Images -}}
+        - {{.}}
+        {{ end -}}        
+      author:
+        email: fluxcdbot@users.noreply.github.com
+        name: fluxcdbot
   interval: 5m
   update:
     strategy: Setters
