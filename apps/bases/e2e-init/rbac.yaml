@@ -8,7 +8,7 @@ kind: Role
 metadata:
   name: e2e-init
 rules:
-  - apiGroups: [""]
+  - apiGroups: ["batch"]
     resources: ["jobs"]
     verbs: ["get", "list", "delete"]
 ---
