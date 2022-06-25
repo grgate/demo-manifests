@@ -3,3 +3,7 @@ kind: Kustomization
 resources:
   - ./feature-a
   - ./feature-b
+images:
+  - name: grgate/demo-e2e-runner
+    newName: grgate/demo-e2e-runner # {"$imagepolicy": "flux-system:demo-e2e-runner:name"}
+    newTag: main-c0f5499f71fd711abfa7da97408a0b150627a8ea-5 # {"$imagepolicy": "flux-system:demo-e2e-runner:tag"}
