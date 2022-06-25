@@ -6,8 +6,7 @@ resources:
 images:
   - name: grgate/demo-frontend
     newName: grgate/demo-frontend # {"$imagepolicy": "flux-system:demo-frontend:name"}
-    newTag: 5.0.0 # {"$imagepolicy": "flux-system:demo-frontend:tag"}
-
+    newTag: main-54e95ec8cc9d6afafe932591a30fb4a7e57ee91c-7 # {"$imagepolicy": "flux-system:demo-frontend:tag"}
   - name: grgate/demo-backend
     newName: grgate/demo-backend # {"$imagepolicy": "flux-system:demo-backend:name"}
     newTag: main-c0f5499f71fd711abfa7da97408a0b150627a8ea-5 # {"$imagepolicy": "flux-system:demo-backend:tag"}
