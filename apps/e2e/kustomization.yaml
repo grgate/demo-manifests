@@ -6,10 +6,10 @@ resources:
 images:
   - name: grgate/demo-frontend
     newName: grgate/demo-frontend # {"$imagepolicy": "flux-system:demo-frontend-e2e:name"}
-    newTag: main-17c0e769e1cb1e8f4f615d6495619cc2b026ed9d-12 # {"$imagepolicy": "flux-system:demo-frontend-e2e:tag"}
+    newTag: main-b188276288abb3757cb97ddac2a81375c342bfdd-13 # {"$imagepolicy": "flux-system:demo-frontend-e2e:tag"}
   - name: grgate/demo-backend
     newName: grgate/demo-backend # {"$imagepolicy": "flux-system:demo-backend-e2e:name"}
-    newTag: main-0ca51f0dc90a514068740e74a9a2354b42cf26eb-7 # {"$imagepolicy": "flux-system:demo-backend-e2e:tag"}
+    newTag: main-205bf2cd4106d93846d19cc66180028b1a9b7d78-8 # {"$imagepolicy": "flux-system:demo-backend-e2e:tag"}
   - name: grgate/demo-e2e-runner
     newName: grgate/demo-e2e-runner # {"$imagepolicy": "flux-system:demo-e2e-runner:name"}
     newTag: main-87d46dd788976fd0dc2e7c22789fd49fe6fadecf-10 # {"$imagepolicy": "flux-system:demo-e2e-runner:tag"}
