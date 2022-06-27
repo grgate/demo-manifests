@@ -9,7 +9,7 @@ images:
     newTag: main-48b390c182bb0ed88fb17b6ea9cb6cae359e28e1-14 # {"$imagepolicy": "flux-system:demo-frontend-e2e:tag"}
   - name: grgate/demo-backend
     newName: grgate/demo-backend # {"$imagepolicy": "flux-system:demo-backend-e2e:name"}
-    newTag: main-bcd46369cf1844ed18833d2448e38ec066d50362-9 # {"$imagepolicy": "flux-system:demo-backend-e2e:tag"}
+    newTag: main-c05da7741547bc35820ae12309ff10c369674195-10 # {"$imagepolicy": "flux-system:demo-backend-e2e:tag"}
   - name: grgate/demo-e2e-runner
     newName: grgate/demo-e2e-runner # {"$imagepolicy": "flux-system:demo-e2e-runner:name"}
     newTag: main-87d46dd788976fd0dc2e7c22789fd49fe6fadecf-10 # {"$imagepolicy": "flux-system:demo-e2e-runner:tag"}
