@@ -29,9 +29,11 @@ metadata:
 spec:
   imageRepositoryRef:
     name: demo-frontend
+  filterTags:
+    pattern: 'v.*'
   policy:
     semver:
-      range: 1.x.x
+      range: '^v0.x.x'
 ---
 apiVersion: image.toolkit.fluxcd.io/v1beta1
 kind: ImagePolicy
@@ -40,9 +42,11 @@ metadata:
 spec:
   imageRepositoryRef:
     name: demo-backend
+  filterTags:
+    pattern: 'v.*'
   policy:
     semver:
-      range: 1.x.x
+      range: '^v0.x.x'
 ---
 apiVersion: image.toolkit.fluxcd.io/v1beta1
 kind: ImagePolicy
