@@ -11,4 +11,4 @@ images:
     newTag: v0.1.1 # {"$imagepolicy": "flux-system:demo-frontend-prod:tag"}
   - name: grgate/demo-backend
     newName: grgate/demo-backend # {"$imagepolicy": "flux-system:demo-backend-prod:name"}
-    newTag: v0.1.1 # {"$imagepolicy": "flux-system:demo-backend-prod:tag"}
+    newTag: v0.1.0 # {"$imagepolicy": "flux-system:demo-backend-prod:tag"}
