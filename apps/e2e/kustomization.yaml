@@ -6,7 +6,7 @@ resources:
 images:
   - name: grgate/demo-frontend
     newName: grgate/demo-frontend # {"$imagepolicy": "flux-system:demo-frontend-e2e:name"}
-    newTag: main-48b390c182bb0ed88fb17b6ea9cb6cae359e28e1-14 # {"$imagepolicy": "flux-system:demo-frontend-e2e:tag"}
+    newTag: main-168f125f2c78b9d155014ea3dc2193a36176bc90-15 # {"$imagepolicy": "flux-system:demo-frontend-e2e:tag"}
   - name: grgate/demo-backend
     newName: grgate/demo-backend # {"$imagepolicy": "flux-system:demo-backend-e2e:name"}
     newTag: main-c05da7741547bc35820ae12309ff10c369674195-10 # {"$imagepolicy": "flux-system:demo-backend-e2e:tag"}
